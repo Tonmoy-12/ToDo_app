@@ -1,33 +1,27 @@
 import mongoose from "mongoose";
 
-// Define the Task schema
-const taskSchema = new mongoose.Schema({
+const schema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
   },
-
   description: {
     type: String,
     required: true,
   },
-
   isCompleted: {
     type: Boolean,
     default: false,
   },
-
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User", // Reference the User model
+    ref: "User",
     required: true,
   },
-
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-// Export the Task model based on the schema
-export const Task = mongoose.model("Task", taskSchema);
+export const Task = mongoose.model("Task", schema);

@@ -4,6 +4,8 @@ import { sendCookie } from "../utils/fetures.js";
 import jwt from "jsonwebtoken";
 import ErrorHandler from "../middlewares/error.js";
 
+
+
 // Get all users
 export const getAllUsers = async (req, res, next) => {
     try {
