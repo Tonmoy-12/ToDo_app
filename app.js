@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["*"],
+    origin: [process.env.FRONTEND_URL, "http://localhost:5173","https://react-to-do-app-kappa-one.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
